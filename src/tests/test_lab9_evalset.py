@@ -57,3 +57,11 @@ def test_check_rejects_missing_tags(tmp_path, evalset_cli):
     result = evalset_cli("--check")
     assert result.returncode == 1, result.stdout + result.stderr
     assert "failure_modes empty" in result.stdout
+
+
+def test_build_uses_lf_newlines_for_cross_platform_sha(tmp_path, evalset_cli):
+    result = evalset_cli("--build")
+    assert result.returncode == 0
+    data = (tmp_path / "data/eval/eval_set_v1.jsonl").read_bytes()
+    assert b"\r\n" not in data
+    assert data.endswith(b"\n")
