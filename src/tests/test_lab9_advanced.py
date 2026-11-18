@@ -63,6 +63,14 @@ def test_integrity_flags_loosened_spec():
     assert gate.integrity_check(base, base, SPEC, SPEC) == []
 
 
+def test_integrity_flags_fabricated_aggregate():
+    from lab9 import gate
+
+    base = _report(copy.deepcopy(ROWS), {"pass_rate": 1.0})
+    fake = _report(copy.deepcopy(ROWS), {"pass_rate": 0.9})
+    assert gate.integrity_check(fake, base, SPEC)
+
+
 def test_slice_check_blocks_a_slice_below_floor():
     from lab9 import gate
 
