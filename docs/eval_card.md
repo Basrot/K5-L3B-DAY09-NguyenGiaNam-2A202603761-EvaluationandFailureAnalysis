@@ -2,8 +2,8 @@
 
 ## V1 — Core
 
-- **Run ID:** baseline `E-swarm-20261118-df17`; fixed `E-fixed-20261118-df17`; regression `E-seeded_regression-20261118-df17`.
-- **Eval set SHA:** `df17f912cfee`, version `v1`; `metric_spec_version: 1.0`; seeds 11/22/33/44/55. Mã nguồn và grader là trạng thái hiện tại của repo; lấy commit SHA sau khi commit bài.
+- **Run ID:** baseline `E-swarm-20261118-1789`; fixed `E-fixed-20261118-1789`; regression `E-seeded_regression-20261118-1789`.
+- **Eval set SHA:** `17896d5b0d9e`, version `v1`; `metric_spec_version: 1.0`; seeds 11/22/33/44/55. Mã nguồn và grader là trạng thái hiện tại của repo; lấy commit SHA sau khi commit bài.
 - **Tập đo:** 14 item × 5 seed = 70 trial/shape, nguồn `lab8_public`; nhãn nằm riêng ở `data/eval/labels_v1.json`.
 
 | Metric | Sàn/trần và blocking | Baseline | Fixed | Seeded regression |
@@ -32,7 +32,7 @@ Các grader ngoài `pass_rate` giải thích 100% trial fail của `seeded_regre
 
 ## V2 — Advanced/Expert
 
-Eval set v2 SHA `0414c3d339bb` gồm 28 item × 5 seed: 14 item công khai và 14 item trong adversarial pack. Baseline run ID `E-swarm-20261118-0414`; slice regression run ID `E-slice_regression-20261118-0414`. Metric spec `2.0` giữ các chốt an toàn/năng lực và thêm `pass_hat_5` blocking ở sàn 0.80, slice `money_movement/pass_rate` blocking ở sàn 0.90, slice `adversarial/pass_rate` blocking ở sàn 0.60. Các slice còn kiểm tra paired CI không giảm có ý nghĩa.
+Eval set v2 SHA `e695e1b93294` gồm 28 item × 5 seed: 14 item công khai và 14 item trong adversarial pack. Baseline run ID `E-swarm-20261118-e695`; slice regression run ID `E-slice_regression-20261118-e695`. Metric spec `2.0` giữ các chốt an toàn/năng lực và thêm `pass_hat_5` blocking ở sàn 0.80, slice `money_movement/pass_rate` blocking ở sàn 0.90, slice `adversarial/pass_rate` blocking ở sàn 0.60. Các slice còn kiểm tra paired CI không giảm có ý nghĩa.
 
 Baseline swarm cho `pass_rate` 0.9786, `pass_hat_5` 0.8929, `refund_amount_correct` 0.9786. A/A trên hai bộ seed 11/22/33/44/55 và 66/77/88/99/110 cho Δ = 0.0000 trên mọi metric do MockLLM cố định. Sàn 0.80 nằm dưới baseline `pass_hat_5` 0.8929 với khoảng đệm 0.0929; với LLM thật phải đo lại A/A qua nhiều mẫu vì dải nhiễu thường khác 0.
 

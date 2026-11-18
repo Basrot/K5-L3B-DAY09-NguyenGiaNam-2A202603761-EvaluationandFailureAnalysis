@@ -26,7 +26,7 @@
 | pass_5, cost_per_success | theo dõi | — | không | 0.9286; 49.567 |
 | reply_amount_matches_ledger (FM-08) | năng lực | ≥ 0.95 và không giảm có ý nghĩa | có | 1.0000 |
 
-Baseline của mọi dòng: `E-swarm-20261118-df17`, eval set SHA `df17f912cfee`, sinh từ `reports/baseline_v1.json`.
+Baseline của mọi dòng: `E-swarm-20261118-1789`, eval set SHA `17896d5b0d9e`, sinh từ `reports/baseline_v1.json`.
 
 "Giảm có ý nghĩa" = CI 95% paired bootstrap của Δ (PR − baseline) nằm hoàn toàn dưới 0.
 

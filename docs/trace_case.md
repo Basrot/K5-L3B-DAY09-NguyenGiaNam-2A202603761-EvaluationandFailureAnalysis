@@ -4,7 +4,7 @@ Chạy từ `src/`: `python -m lab9.trace_case --shape seeded_regression --claim
 
 | Trường | Kết quả |
 |---|---|
-| Trial | `seeded_regression C-002@11`, run ID `E-seeded_regression-20261118-df17`; xem `reports/eval_seeded_regression.json` |
+| Trial | `seeded_regression C-002@11`, run ID `E-seeded_regression-20261118-1789`; xem `reports/eval_seeded_regression.json` |
 | Triệu chứng | Lab 8 grader FAIL: `status resolved != denied`; ledger hoàn 20.000đ, nhãn yêu cầu 0đ. |
 | Bước sai đầu tiên | Event **3 `model_override`** ghi `delay_days: 5`. |
 | Vì sao đầu tiên | Event 1 handoff và event 2 investigator chỉ chuyển việc/đọc đơn; event 3 thay dữ kiện DB bằng số ngày ticket trước khi event 4 quote 20.000đ. |
